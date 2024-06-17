@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/com.digimart.iml" filepath="$PROJECT_DIR$/.idea/com.digimart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.digimart/com.digimart.iml" filepath="$PROJECT_DIR$/com.digimart/com.digimart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/digimart_api.iml" filepath="$PROJECT_DIR$/.idea/digimart_api.iml" />
     </modules>
   </component>
 </project>
