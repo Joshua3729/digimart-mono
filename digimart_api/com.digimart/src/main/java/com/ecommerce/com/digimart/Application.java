@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"com.ecommerce.com.digimart"})
 @EntityScan("com.ecommerce.com.digimart.*")
 @SpringBootApplication
 public class Application {

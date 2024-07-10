@@ -2,9 +2,11 @@ package com.ecommerce.com.digimart.services.impl;
 
 import com.ecommerce.com.digimart.entities.Product;
 import com.ecommerce.com.digimart.services.base.IProductService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductService implements IProductService
 {
     @Override
