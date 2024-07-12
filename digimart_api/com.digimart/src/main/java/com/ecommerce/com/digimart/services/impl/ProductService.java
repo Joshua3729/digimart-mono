@@ -12,7 +12,9 @@ public class ProductService implements IProductService
     @Override
     public List<Product> getAllProducts()
     {
-        return List.of();
+        Product product = new Product();
+        Product[] items = new Product[] {product};
+        return List.of(items);
     }
 
     @Override
