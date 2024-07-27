@@ -19,6 +19,7 @@ public class WebSecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/products").permitAll()
                         .requestMatchers("/products/**").permitAll()      //Existing services
                         .requestMatchers(HttpMethod.OPTIONS).permitAll()      //PBE
                         .requestMatchers("/api/**").authenticated());
