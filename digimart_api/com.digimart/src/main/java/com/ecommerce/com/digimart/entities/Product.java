@@ -26,6 +26,9 @@ public class Product
     @Column(name = "price")
     private Double price;
 
+    @Column(name = "category")
+    private String category;
+
     @Column(name = "supplier_id")
     private String supplierId;
 
