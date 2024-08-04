@@ -53,7 +53,7 @@ public class MockProducts extends AMockData
 
 
                 try (Connection connection = hcp.getConnection();
-                     PreparedStatement preparedStatement = connection.prepareStatement(saveRateStatement)
+                     PreparedStatement preparedStatement = connection.prepareStatement(saveProductsStatements)
                 )
                 {
                     int i = 0;
