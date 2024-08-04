@@ -1,4 +1,4 @@
-package com.ecommerce.com.digimart.dbms.persistance.repositories;
+package com.ecommerce.com.digimart.dbms.services.repositories;
 
 import com.ecommerce.com.digimart.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
