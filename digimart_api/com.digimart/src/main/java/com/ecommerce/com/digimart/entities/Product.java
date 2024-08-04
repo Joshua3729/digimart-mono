@@ -2,6 +2,9 @@ package com.ecommerce.com.digimart.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.UuidGenerator;
+
+import java.util.UUID;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -9,13 +12,14 @@ import lombok.*;
 @Setter
 @ToString
 @Builder
-@Entity
+@Entity(name = "products")
+@Table(name = "products")
 public class Product
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
+    @GeneratedValue
+    @UuidGenerator
+    private UUID id;
 
     @Column(name = "name")
     private String name;
@@ -38,5 +42,7 @@ public class Product
     @Column(name = "tax_percentage")
     private double taxPercentage;
 
+    @Column(name = "img_url")
+    private int imgUrl;
 
 }

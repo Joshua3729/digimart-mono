@@ -3,6 +3,7 @@ package com.ecommerce.com.digimart.controllers;
 import com.ecommerce.com.digimart.entities.Product;
 import com.ecommerce.com.digimart.services.impl.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,9 +19,10 @@ public class ProductController
     @Autowired
     private ProductService productService;
 
-    @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts("Books");
+    @GetMapping("/{category}")
+    public ResponseEntity<List<Product>> getAllProducts(@PathVariable String category) {
+        List<Product> products = productService.getAllProducts(category);
+        return new ResponseEntity<>(products, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
