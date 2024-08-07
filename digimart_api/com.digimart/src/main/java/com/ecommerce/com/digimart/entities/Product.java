@@ -17,8 +17,7 @@ import java.util.UUID;
 public class Product
 {
     @Id
-    @GeneratedValue
-    @UuidGenerator
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
     @Column(name = "name")
@@ -43,6 +42,6 @@ public class Product
     private double taxPercentage;
 
     @Column(name = "img_url")
-    private int imgUrl;
+    private String imgUrl;
 
 }

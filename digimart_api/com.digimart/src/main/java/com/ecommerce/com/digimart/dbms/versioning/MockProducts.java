@@ -6,16 +6,12 @@ import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.nio.ByteBuffer;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.UUID;
 
 @Log4j2
 public class MockProducts extends AMockData
@@ -30,14 +26,12 @@ public class MockProducts extends AMockData
                 password);
     }
 
-    // TODO: Validate rate before processing
-    // TODO: Display warning if dates are not ordered correctly
     @Override
     protected void insertData(List<String[]> products)
     {
         log.debug("Adding products to database");
-        String saveProductsStatements = "INSERT INTO products (category, description, img_url, name, price, supplier_id, tax_percentage, units_in_stock) " +
-                "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String saveProductsStatements = "INSERT INTO products (id, category, description, img_url, name, price, supplier_id, tax_percentage, units_in_stock) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         for (String[] product : products)
         {
@@ -52,11 +46,15 @@ public class MockProducts extends AMockData
                 String units_in_stock = product[7];
 
 
-                try (Connection connection = hcp.getConnection();
+                try (Connection connection = hcp.getConnection(); 
                      PreparedStatement preparedStatement = connection.prepareStatement(saveProductsStatements)
                 )
                 {
                     int i = 0;
+                    UUID id = UUID.randomUUID();
+                    byte[] idBytes = uuidToBytes(id);
+
+                    preparedStatement.setBytes(++i, idBytes);
                     preparedStatement.setString(++i, category);
                     preparedStatement.setString(++i, description);
                     preparedStatement.setString(++i, img_url);
@@ -72,5 +70,12 @@ public class MockProducts extends AMockData
                     log.error(throwable.getMessage(), throwable);
                 }
         }
+    }
+
+    private byte[] uuidToBytes(UUID uuid) {
+        ByteBuffer bb = ByteBuffer.wrap(new byte[16]);
+        bb.putLong(uuid.getMostSignificantBits());
+        bb.putLong(uuid.getLeastSignificantBits());
+        return bb.array();
     }
 }

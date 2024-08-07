@@ -1,0 +1,49 @@
+category,description,img_url,name,price,supplier_id,tax_percentage,units_in_stock
+Electronics,Smartphone with 5G connectivity,https://example.com/img/smartphone1.jpg,Smartphone X,699.99,supplier123,15.0,100
+Electronics,High-performance laptop with 16GB RAM,https://example.com/img/laptop1.jpg,Laptop Pro,1299.99,supplier124,18.0,50
+Clothing,Men's casual t-shirt,https://example.com/img/tshirt1.jpg,Men's T-Shirt,19.99,supplier125,5.0,200
+Clothing,Women's summer dress,https://example.com/img/dress1.jpg,Women's Dress,49.99,supplier126,5.0,150
+Home Appliances,Automatic vacuum cleaner,https://example.com/img/vacuum1.jpg,Robot Vacuum,299.99,supplier127,12.0,30
+Home Appliances,Air purifier with HEPA filter,https://example.com/img/airpurifier1.jpg,Air Purifier,199.99,supplier128,12.0,40
+Books,Science fiction novel,https://example.com/img/scifi1.jpg,The Galactic Voyage,14.99,supplier129,10.0,300
+Books,Cooking recipes book,https://example.com/img/cookbook1.jpg,The Gourmet Chef,29.99,supplier130,10.0,120
+Electronics,Noise-cancelling headphones,https://example.com/img/headphones1.jpg,Headphones Plus,199.99,supplier131,18.0,80
+Electronics,Smartwatch with fitness tracking,https://example.com/img/smartwatch1.jpg,Smartwatch Fit,249.99,supplier132,15.0,150
+Clothing,Women's winter jacket,https://example.com/img/jacket1.jpg,Winter Jacket,99.99,supplier133,5.0,75
+Clothing,Men's formal shirt,https://example.com/img/shirt1.jpg,Formal Shirt,39.99,supplier134,5.0,180
+Home Appliances,Blender with multiple settings,https://example.com/img/blender1.jpg,Multi Blender,79.99,supplier135,12.0,50
+Home Appliances,Electric kettle,https://example.com/img/kettle1.jpg,Quick Boil Kettle,49.99,supplier136,12.0,60
+Books,Historical fiction novel,https://example.com/img/fiction1.jpg,The Forgotten Kingdom,19.99,supplier137,10.0,250
+Books,Children's illustrated book,https://example.com/img/children1.jpg,Adventures in Wonderland,24.99,supplier138,10.0,200
+Electronics,4K Ultra HD TV,https://example.com/img/tv1.jpg,Ultra HD TV,999.99,supplier139,18.0,30
+Electronics,Wireless Bluetooth speaker,https://example.com/img/speaker1.jpg,Bluetooth Speaker,129.99,supplier140,15.0,120
+Clothing,Men's running shoes,https://example.com/img/shoes1.jpg,Running Shoes,59.99,supplier141,5.0,140
+Clothing,Women's handbag,https://example.com/img/handbag1.jpg,Leather Handbag,79.99,supplier142,5.0,90
+Home Appliances,Microwave oven,https://example.com/img/microwave1.jpg,Quick Heat Microwave,149.99,supplier143,12.0,40
+Home Appliances,Refrigerator with freezer,https://example.com/img/fridge1.jpg,Double Door Fridge,899.99,supplier144,12.0,20
+Books,Mystery thriller novel,https://example.com/img/thriller1.jpg,The Silent Witness,16.99,supplier145,10.0,300
+Books,Self-help motivational book,https://example.com/img/selfhelp1.jpg,Achieve Your Goals,21.99,supplier146,10.0,150
+Electronics,Digital camera with 20MP lens,https://example.com/img/camera1.jpg,Pro Camera,599.99,supplier147,18.0,70
+Electronics,Tablet with 10-inch display,https://example.com/img/tablet1.jpg,Tablet Pro,399.99,supplier148,15.0,60
+Clothing,Men's leather belt,https://example.com/img/belt1.jpg,Leather Belt,29.99,supplier149,5.0,110
+Clothing,Women's yoga pants,https://example.com/img/yogapants1.jpg,Yoga Pants,39.99,supplier150,5.0,170
+Home Appliances,Coffee maker,https://example.com/img/coffeemaker1.jpg,Espresso Maker,129.99,supplier151,12.0,45
+Home Appliances,Toaster with extra-wide slots,https://example.com/img/toaster1.jpg,Wide Slot Toaster,39.99,supplier152,12.0,65
+Books,Romantic novel,https://example.com/img/romance1.jpg,Love in Paris,17.99,supplier153,10.0,280
+Books,Autobiography of a famous person,https://example.com/img/biography1.jpg,Life Stories,22.99,supplier154,10.0,100
+Electronics,Portable charger with high capacity,https://example.com/img/charger1.jpg,Power Bank,49.99,supplier155,15.0,150
+Electronics,Smart home assistant device,https://example.com/img/smarthome1.jpg,Home Assistant,129.99,supplier156,18.0,90
+Clothing,Women's wool scarf,https://example.com/img/scarf1.jpg,Wool Scarf,24.99,supplier157,5.0,80
+Clothing,Men's winter gloves,https://example.com/img/gloves1.jpg,Winter Gloves,19.99,supplier158,5.0,100
+Home Appliances,Dishwasher with multiple cycles,https://example.com/img/dishwasher1.jpg,Efficient Dishwasher,499.99,supplier159,12.0,25
+Home Appliances,Electric grill,https://example.com/img/grill1.jpg,Indoor Grill,99.99,supplier160,12.0,50
+Books,Fantasy novel,https://example.com/img/fantasy1.jpg,The Dragon's Quest,18.99,supplier161,10.0,200
+Books,Guide to personal finance,https://example.com/img/finance1.jpg,Financial Freedom,25.99,supplier162,10.0,140
+Electronics,Gaming console,https://example.com/img/console1.jpg,Gaming Pro,399.99,supplier163,15.0,40
+Electronics,Virtual reality headset,https://example.com/img/vr1.jpg,VR Headset,299.99,supplier164,18.0,50
+Clothing,Men's denim jeans,https://example.com/img/jeans1.jpg,Denim Jeans,49.99,supplier165,5.0,130
+Clothing,Women's leather boots,https://example.com/img/boots1.jpg,Leather Boots,89.99,supplier166,5.0,70
+Home Appliances,Slow cooker,https://example.com/img/slowcooker1.jpg,Slow Cooker,59.99,supplier167,12.0,55
+Home Appliances,Iron with steam function,https://example.com/img/iron1.jpg,Steam Iron,39.99,supplier168,12.0,60
+Books,Science textbook,https://example.com/img/sciencetext1.jpg,Understanding Physics,29.99,supplier169,10.0,150
+Books,Travel guidebook,https://example.com/img/travel1.jpg,Explore the World,26.99,supplier170,10.0,110

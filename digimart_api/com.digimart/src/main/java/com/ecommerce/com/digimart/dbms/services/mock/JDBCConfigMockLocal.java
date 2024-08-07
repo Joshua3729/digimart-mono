@@ -5,6 +5,7 @@ import com.ecommerce.com.digimart.dbms.utilities.HikariConnectionPool;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Value;
 import com.ecommerce.com.digimart.dbms.versioning.MockProducts;
@@ -20,13 +21,15 @@ import java.util.Objects;
 
 @Service
 @Primary
+@Profile("local")
 @Log4j2
 @Deprecated
 public class JDBCConfigMockLocal implements IJDBCConfig {
+
     @Value("${spring.datasource.url}")
     String jdbcUrl;
 
-    @Value("${dre.db.name}")
+    @Value("${digimart.db.name}")
     String dbName;
 
     @Value("${spring.datasource.username}")
@@ -35,10 +38,16 @@ public class JDBCConfigMockLocal implements IJDBCConfig {
     @Value("${spring.datasource.password}")
     String password;
 
-    @Value("${db.seeddata}")
+    @Value("${digimart.db.seeddata}")
     Boolean seedData;
 
     HikariConnectionPool hcp;
+
+    @PostConstruct
+    public void initService() {
+        log.info("JDBCConfigMockLocal service initialized");
+        init();
+    }
 
     public HikariConnectionPool init()
     {
@@ -50,7 +59,7 @@ public class JDBCConfigMockLocal implements IJDBCConfig {
             try
             {
                 //Mock profile entries
-                byte[] products = Files.readAllBytes(new File(Objects.requireNonNull(getClass().getClassLoader().getResource("mock_entries.csv")).toURI()).toPath());
+                byte[] products = Files.readAllBytes(new File(Objects.requireNonNull(getClass().getClassLoader().getResource("mock_products.csv")).toURI()).toPath());
                 List<String[]> productsList = mockProducts.readCsv(products, true);
                 if (productsList != null) mockProducts.processAndIngestMockedData(productsList);
             }

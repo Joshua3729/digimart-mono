@@ -4,10 +4,12 @@ import com.ecommerce.com.digimart.entities.Product;
 import com.ecommerce.com.digimart.services.base.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Profile("local")
 @Service
 public class ProductService implements IProductService
 {
@@ -17,9 +19,7 @@ public class ProductService implements IProductService
     @Override
     public List<Product> getAllProducts(String category)
     {
-        List<Product> products = DBMSProductService.getProductsByCategory(category);
-
-        return products;
+        return DBMSProductService.getProductsByCategory(category);
     }
 
     @Override
